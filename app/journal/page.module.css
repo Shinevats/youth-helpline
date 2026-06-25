@@ -1,0 +1,160 @@
+.header {
+  padding: calc(var(--navbar-height) + 48px) 0 48px;
+  background: var(--bg-secondary); position: relative; overflow: hidden;
+}
+.headerOrb {
+  position: absolute; width: 350px; height: 350px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(13,148,136,0.1) 0%, transparent 70%);
+  top: -100px; left: -80px; pointer-events: none;
+}
+.headerContent {
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; gap: 16px;
+}
+.headerContent p { max-width: 480px; color: var(--text-secondary); }
+
+/* PIN Gate */
+.pinGate {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  padding: calc(var(--navbar-height) + 40px) 24px 40px;
+}
+.pinCard {
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl); padding: 48px 40px;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 16px; text-align: center; max-width: 400px; width: 100%;
+  box-shadow: var(--shadow-xl);
+}
+.pinIcon {
+  width: 64px; height: 64px; border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--teal-600), var(--teal-400));
+  display: flex; align-items: center; justify-content: center; color: white;
+  box-shadow: 0 8px 24px rgba(13,148,136,0.3);
+}
+.pinCard h2 { font-size: 1.4rem; }
+.pinCard p { color: var(--text-secondary); font-size: 0.9rem; }
+.pinCard .input { text-align: center; font-size: 1.1rem; letter-spacing: 0.2em; }
+.forgotPin {
+  font-size: 0.8rem; color: var(--text-muted); background: none; border: none;
+  cursor: pointer; text-decoration: underline; font-family: var(--font-body);
+}
+
+.content { background: var(--bg-primary); }
+.contentInner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 1fr 260px; gap: 24px; align-items: start;
+}
+
+.mainCol { display: flex; flex-direction: column; gap: 20px; }
+
+.toolbar {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+}
+.toolbarRight { display: flex; align-items: center; gap: 8px; }
+.savedMsg { font-size: 0.85rem; color: #22c55e; font-weight: 600; animation: fadeIn 0.3s ease; }
+
+.pinSetup { display: flex; flex-direction: column; gap: 12px; }
+.pinSetup h4 { font-size: 1rem; font-weight: 700; }
+.pinSetup p { font-size: 0.85rem; color: var(--text-muted); }
+.pinSetupRow { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+/* Write card */
+.writeCard { display: flex; flex-direction: column; gap: 14px; }
+.writeTitle { font-size: 1.1rem; font-weight: 700; }
+.moodSelector { display: flex; flex-direction: column; gap: 8px; }
+.moodLabel { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); }
+.moodGrid { display: flex; flex-wrap: wrap; gap: 6px; }
+.moodBtn {
+  display: flex; align-items: center; gap: 5px;
+  padding: 6px 10px; border-radius: var(--radius-full);
+  background: var(--bg-secondary); border: 1.5px solid var(--border-subtle);
+  cursor: pointer; transition: all 0.15s ease; font-family: var(--font-body);
+}
+.moodBtn:hover { border-color: var(--accent-primary); background: var(--bg-hover); }
+.moodActive { border-width: 2px; }
+.moodEmoji { font-size: 1.1rem; }
+.moodName { font-size: 0.75rem; color: var(--text-secondary); font-weight: 500; }
+
+.writeRow { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.writeRow .input { flex: 1; min-width: 200px; }
+.writeActions { display: flex; justify-content: flex-end; gap: 10px; }
+
+/* Empty state */
+.emptyState {
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  text-align: center; padding: 64px 24px;
+  background: var(--bg-card); border: 1px dashed var(--border-color);
+  border-radius: var(--radius-xl);
+}
+.emptyEmoji { font-size: 3rem; }
+.emptyState h3 { font-size: 1.2rem; }
+.emptyState p { color: var(--text-muted); }
+
+/* Entry cards */
+.entriesList { display: flex; flex-direction: column; gap: 12px; }
+.entryCard { display: flex; flex-direction: column; gap: 0; }
+.entryHeader { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.entryLeft { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
+.entryMood { font-size: 1.6rem; flex-shrink: 0; }
+.entryTitle { font-family: var(--font-primary); font-size: 0.95rem; font-weight: 700; }
+.entryMeta {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  font-size: 0.72rem; color: var(--text-muted); margin-top: 3px;
+}
+.entryMeta span { display: flex; align-items: center; gap: 3px; }
+.entryActions { display: flex; gap: 4px; flex-shrink: 0; }
+.entryToggle {
+  width: 32px; height: 32px; border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg-hover); border: none; cursor: pointer;
+  color: var(--text-muted); transition: all 0.15s;
+}
+.entryToggle:hover { color: var(--accent-primary); }
+.deleteBtn {
+  width: 32px; height: 32px; border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  background: none; border: none; cursor: pointer;
+  color: var(--text-muted); transition: all 0.15s;
+}
+.deleteBtn:hover { color: #dc2626; background: rgba(220,38,38,0.1); }
+
+.entryContent {
+  margin-top: 12px; padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+  animation: fadeInUp 0.25s ease;
+}
+.entryContent p {
+  font-size: 0.9rem; color: var(--text-secondary); line-height: 1.75;
+  white-space: pre-wrap;
+}
+
+/* Sidebar */
+.journalSidebar { display: flex; flex-direction: column; gap: 16px; position: sticky; top: calc(var(--navbar-height) + 16px); }
+.sideCard { display: flex; flex-direction: column; gap: 12px; }
+.sideTitle { font-family: var(--font-primary); font-size: 0.92rem; font-weight: 700; }
+.stats { display: flex; gap: 16px; }
+.stat { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.statVal { font-family: var(--font-primary); font-size: 1.8rem; font-weight: 800; color: var(--teal-600); }
+.statLabel { font-size: 0.75rem; color: var(--text-muted); }
+
+.moodHistory { display: flex; flex-wrap: wrap; gap: 6px; }
+.moodHistItem {
+  width: 34px; height: 34px; border-radius: var(--radius-md);
+  background: var(--bg-hover); display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; cursor: default;
+}
+
+.prompts { display: flex; flex-direction: column; gap: 6px; }
+.promptBtn {
+  text-align: left; padding: 8px 10px; border-radius: var(--radius-md);
+  font-size: 0.8rem; color: var(--text-secondary); background: var(--bg-hover);
+  border: 1px solid transparent; cursor: pointer; transition: all 0.15s;
+  font-family: var(--font-body); line-height: 1.4;
+}
+.promptBtn:hover { background: var(--accent-light); color: var(--teal-700); border-color: var(--border-color); }
+[data-theme='dark'] .promptBtn:hover { background: rgba(13,148,136,0.2); color: var(--teal-400); }
+
+@media (max-width: 900px) {
+  .contentInner { grid-template-columns: 1fr; }
+  .journalSidebar { position: static; }
+}

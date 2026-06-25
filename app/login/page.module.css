@@ -1,0 +1,125 @@
+.loginPage {
+  min-height: calc(100vh - var(--navbar-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  background: var(--bg-primary);
+}
+
+.loginCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  width: 100%;
+  max-width: 540px;
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: scaleIn 0.3s ease;
+  position: relative;
+}
+
+.loginLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--teal-600);
+  margin-bottom: 8px;
+}
+
+.loginHead { text-align: center; display: flex; flex-direction: column; gap: 8px; }
+.loginTitle { font-size: 1.6rem; font-weight: 700; }
+.loginDesc { color: var(--text-secondary); font-size: 0.95rem; }
+
+/* Roles */
+.roles { display: flex; flex-direction: column; gap: 12px; }
+.roleCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  position: relative;
+}
+.roleCard:hover { background: var(--bg-hover); transform: translateY(-2px); }
+.roleActive { background: var(--bg-hover); }
+
+.roleIcon {
+  width: 48px; height: 48px;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.roleInfo { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.roleHeader { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.roleTitle { font-family: var(--font-primary); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
+.roleSubtitle { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+.roleDesc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+
+.roleFeatures { list-style: none; display: flex; flex-direction: column; gap: 4px; margin-top: 4px; }
+.roleFeatures li {
+  font-size: 0.78rem; color: var(--text-muted);
+  display: flex; align-items: center; gap: 6px;
+}
+.roleFeatures li svg { color: var(--teal-500); }
+
+.roleCheck {
+  position: absolute; top: 20px; right: 20px;
+  width: 24px; height: 24px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: white; animation: bounceIn 0.3s ease;
+}
+
+/* Step 2 */
+.backBtn {
+  position: absolute; top: 24px; left: 24px;
+  font-size: 0.85rem; color: var(--text-muted);
+  background: none; border: none; cursor: pointer;
+  font-family: var(--font-body);
+}
+.backBtn:hover { color: var(--text-primary); }
+
+.avatarSection { display: flex; flex-direction: column; gap: 10px; }
+.avatarLabel { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); }
+.avatarGrid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.avatarBtn {
+  width: 42px; height: 42px; border-radius: var(--radius-full);
+  background: var(--bg-secondary); border: 1.5px solid var(--border-color);
+  font-size: 1.2rem; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.15s ease;
+}
+.avatarBtn:hover { transform: scale(1.1); background: var(--bg-hover); }
+.avatarActive {
+  background: var(--accent-light); border-color: var(--accent-primary);
+  transform: scale(1.1); box-shadow: 0 0 0 2px var(--accent-primary);
+}
+.selectedAvatar {
+  width: 80px; height: 80px; border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--teal-600), var(--teal-400));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem; margin: 0 auto; box-shadow: 0 8px 24px rgba(13,148,136,0.3);
+}
+
+.fields { display: flex; flex-direction: column; gap: 16px; }
+.fieldLabel { font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; display: block; }
+.error { color: #dc2626; font-size: 0.8rem; margin-top: 4px; }
+
+.loginNote { text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 8px; }
+
+@media (max-width: 600px) {
+  .loginCard { padding: 32px 20px; }
+  .roleCard { flex-direction: column; }
+  .roleCheck { top: 20px; right: 20px; }
+}

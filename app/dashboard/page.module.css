@@ -1,0 +1,252 @@
+.dashboard {
+  padding: 40px 0 80px;
+  background: var(--bg-primary);
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatarLarge {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--teal-600), var(--teal-400));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.greeting {
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.roleTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background: var(--accent-light);
+  color: var(--teal-700);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+[data-theme='dark'] .roleTag {
+  background: rgba(13,148,136,0.2);
+  color: var(--teal-400);
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+/* Karma Card */
+.karmaCard {
+  background: linear-gradient(135deg, var(--amber-500), var(--amber-400));
+  color: white;
+  padding: 32px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+}
+
+.karmaHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.karmaIconWrapper {
+  width: 48px;
+  height: 48px;
+  background: rgba(255,255,255,0.2);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.karmaTitle {
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.karmaDesc {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.karmaValue {
+  font-family: var(--font-primary);
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.progressSection {
+  background: rgba(0,0,0,0.1);
+  padding: 16px;
+  border-radius: var(--radius-md);
+}
+
+.progressText {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.progressBar {
+  height: 8px;
+  background: rgba(255,255,255,0.2);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: white;
+  border-radius: var(--radius-full);
+  transition: width 1s ease;
+}
+
+.maxBadgeText {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.statIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.statValue {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Badges Card */
+.badgesCard {
+  padding: 24px;
+}
+
+.cardTitle {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.badgesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.badgeItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s;
+}
+
+.badgeUnlocked {
+  background: var(--accent-light);
+  border-color: rgba(13,148,136,0.3);
+}
+[data-theme='dark'] .badgeUnlocked {
+  background: rgba(13,148,136,0.1);
+}
+
+.badgeLocked {
+  opacity: 0.6;
+}
+
+.badgeIcon {
+  font-size: 2rem;
+}
+
+.badgeInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.badgeTitle {
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.badgeDesc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  .karmaHeader { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .progressText { flex-direction: column; gap: 4px; }
+}

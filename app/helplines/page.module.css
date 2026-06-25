@@ -1,0 +1,129 @@
+.header {
+  padding: calc(var(--navbar-height) + 48px) 0 48px;
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+.headerOrb {
+  position: absolute;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249,115,22,0.12) 0%, transparent 70%);
+  top: -200px; right: -100px;
+  pointer-events: none;
+}
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.headerContent h1 { max-width: 600px; }
+.headerContent p { max-width: 540px; color: var(--text-secondary); }
+
+.emergencyCard {
+  background: linear-gradient(135deg, rgba(220,38,38,0.08), rgba(249,115,22,0.08));
+  border: 1.5px solid rgba(220,38,38,0.2);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.emergencyIcon { font-size: 2rem; flex-shrink: 0; }
+.emergencyTitle {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #dc2626;
+  margin-bottom: 4px;
+}
+.emergencyText { font-size: 0.9rem; color: var(--text-secondary); }
+.emergencyText strong { color: #dc2626; }
+.emergencyBtns { display: flex; gap: 8px; flex-wrap: wrap; margin-left: auto; }
+
+.filtersBar {
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 16px 0;
+  position: sticky;
+  top: var(--navbar-height);
+  z-index: 50;
+}
+.filtersInner { display: flex; flex-direction: column; gap: 12px; }
+.searchWrap { position: relative; max-width: 360px; }
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+.searchInput { padding-left: 36px; }
+.categories { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.content { background: var(--bg-primary); }
+.grid { gap: 20px; }
+
+.helplineCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.25s ease;
+}
+.helplineCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardTop { display: flex; gap: 16px; align-items: flex-start; }
+.cardIcon {
+  width: 56px; height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.cardInfo { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.cardTitleRow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.cardTitle { font-size: 1rem; font-weight: 700; }
+.cardNumber { font-family: var(--font-primary); font-size: 1.05rem; font-weight: 700; }
+
+.cardDesc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+
+.cardMeta { display: flex; gap: 16px; flex-wrap: wrap; }
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.cardActions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 40px;
+  padding: 16px 20px;
+  background: var(--accent-light);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  color: var(--teal-700);
+}
+.disclaimer svg { flex-shrink: 0; margin-top: 2px; }
+[data-theme='dark'] .disclaimer { background: rgba(13,148,136,0.15); color: var(--teal-400); }
+
+.empty { text-align: center; padding: 60px; color: var(--text-muted); }
+
+@media (max-width: 768px) {
+  .emergencyCard { flex-direction: column; }
+  .emergencyBtns { margin-left: 0; }
+}
